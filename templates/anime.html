@@ -1,0 +1,40 @@
+<html>
+  <meta name="viewport" content="height=device-height,width=device-width,initial-scale=2.0"/>
+  <head>
+    <style>
+      @keyframes loading
+      {
+       from{left:0px;}
+       to{left:70vw;}
+      }
+      
+      #load_div
+      {
+      height:1vh;
+      width:2vh;
+      position:relative;
+      background-color:black;
+      animation:loading 0.5s infinite alternate;
+      }
+    </style>
+    <script>
+  function fx()
+  {
+  // setInterval(changer,2000);
+  }
+    </script>
+   
+  </head>
+  <body onload="fx()">
+    <div id="prog_div">
+      <table>
+  <tc>
+    <td>Please Waits </td><td><div id="load_div" style="color:red">
+  </div>
+  </td>
+  </tc>
+   </table>
+    </div>
+
+  </body>
+</html>

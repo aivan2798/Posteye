@@ -1,0 +1,14 @@
+     @keyframes loading
+      {
+       from{left:0px;}
+       to{left:10vh;}
+      }
+      
+      #load_div
+      {
+      height:1vh;
+      width:3vh;
+      position:relative;
+      background-color:black;
+      animation:loading 0.5s infinite alternate;
+      }

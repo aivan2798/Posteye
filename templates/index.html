@@ -1,0 +1,121 @@
+<html>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+  <head>
+    <link rel="stylesheet" type="text/css" href="static/styles/index.css"/>
+    <link rel="stylesheet" type="text/css" href="static/styles/anime.css"/>
+    
+ <script src="static/scripts/chart.js"></script>
+    <script src="static/scripts/const_var.js"></script>   
+    <script src="static/scripts/chart_mod.js"></script>
+    <script src="static/scripts/utilfx.js"></script>
+    <script src="static/scripts/circuit.js"></script>
+    <script src="static/scripts/bigalo.js"></script>
+    <script src="static/scripts/xtraviews.js"></script>
+    <script src="https://connect.facebook.net/en_US/all.js"></script>
+  </head>
+  <body bgcolor="#5E5C5D">
+   <body>
+    <script>
+   login();
+  </script>
+  <div id="main_div" style="display:none">
+    <div id="div-header">
+      <div id="div-header-label">
+        <center>FB TRACK</center> 
+      </div>
+      <div id="div-input">
+        <input id="post-link-input" placeholder="please paste post link"/>
+        <button id="track-trigger" onClick="magi()">
+          <!--button id="track-trigger" onClick="tcharts()"-->
+          TRACK 🏇
+        </button>
+        <button id="filter-trigger" onClick="filter()">
+          <!--button id="track-trigger" onClick="tcharts()"-->
+          FILTER ⚙️
+        </button>
+      </div>
+      <div id="div-progress">
+      {{token}}</div>
+      <button id="logout_button" onclick="logout(this)" style="float:right;margin-right:5%">LOGOUT</button>
+      
+    </div>
+ 
+  
+  <!--start of filter-->  
+    <div id="filter_div" style="background-color:#BFC2B8;display:none;">
+    <b>FILTERS</b><button onclick="kanfilters()">HIDE</button><br/>
+ 
+ <table>
+   <tr>
+     <td>
+  <input id="data" list="data_group" placeholder="Choose filter" onclick="nuller(this)" onchange="pusher(this)">
+  <datalist id="data_group">
+    <option value="sentiments filter"/>
+    <option  value="Emotions filter"/>
+    <option  value="Behavior filter"/>
+  </datalist>
+  
+  </input>
+    </td>
+    <td>
+  <div id="filter_ctrls">
+    
+  </div>
+  </td>
+  <td>
+   <div>
+   <button onclick="genfilter()">
+  FILTER
+</button>
+</div>
+  </td>
+  </tr>
+  </table>
+<div id="action_div" style="display:none;">
+  <table>
+    <tr>
+      <td>
+          <input id="action_type" list="action_group" placeholder="choose action" onclick="nuller(this)" onchange="action_in(this)">
+  <datalist id="action_group">
+    <option value="Reply"/>
+    <option  value="Like"/>
+    <!--option  value="Private Message"/-->
+  </datalist>
+  
+  </input>
+      </td>
+      </tr>
+      </table>
+       <div id="action_holder">
+          
+        </div>
+</div>
+</div>
+  <!--end of filter-->  
+    
+    
+    
+    <div id="chart_div">
+      <canvas id="sentiments_chart">
+      </canvas>
+      <br/>
+      <canvas id="emotions_chart">
+      </canvas>
+      <br/>
+      <canvas id="behaviors_chart">
+      </canvas>
+      <br/>
+    </div>
+    
+  </div>
+  <div id="fb_div" style="background-color:white">
+       <table>
+  <tc>
+    <td><b>PLEASE WAIT FOR FACEBOOK</b> </td><td><div id="load_div" style="color:red">
+  </div>
+  </td>
+  </tc>
+   </table>
+  </div>
+  </body>
+</html>

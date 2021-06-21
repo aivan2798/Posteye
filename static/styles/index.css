@@ -1,0 +1,66 @@
+#div-header-label
+{
+ 
+ color:white;
+ font-weight: bold;
+}
+
+#div-header
+{
+ background-color:#005CFF;
+ width:95vw;
+}
+
+#post-link-input
+{
+ margin-left:2%;
+ width:50%;
+}
+
+#div-input
+{
+ width:95vw;
+}
+
+
+
+
+#chart_div
+{
+/* background-color: #454947;   DBE5E4*/
+/* background-color:white;*/
+ width:95vw;
+ height:95vh;
+ margin-top:2%;
+}
+#filter_div
+{
+/* position:absolute;
+ top:10px;*/
+ width:95vw;
+}
+
+#div-progress
+{
+ font-weight:bold;
+ color:white;
+}
+
+#sentiments_chart
+{
+ height:25%;
+ width:100%;
+ background-color:white;
+}
+#emotions_chart
+{
+ height:25%;
+ width:100%;
+ background-color:white;
+}
+#behaviors_chart
+{
+ height:25%;
+ width:100%;
+ background-color:white;
+}

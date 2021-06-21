@@ -1,0 +1,170 @@
+<!--html>
+  <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0"/>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/styles/"
+    <script></script>
+  </head>
+</html-->
+<script>
+class Filter
+{
+ filter_type;
+ filter_data;
+ action_type;
+ action_data;
+}
+var SENTIMENTS=19980;
+var EMOTIONS=20140;
+var BEHAVIORS=20170;
+var SENTIMENT_FILTER=199801;
+var EMOTIONS_FILTER=201401;
+var BEHAVIORS_FILTER=201701;
+
+  function genfilter()
+  {
+   var type_box=document.getElementById("data").value;
+   var filter_data=document.getElementById("filter_data");
+   var action_type=document.getElementById("action_type");
+   var action_data=document.getElementById("action_msg");
+  var filter_bp=new Filter();
+  
+  switch(type_box)
+  {
+   case "sentiments filter":
+    filter_bp.filter_type=SENTIMENT_FILTER;
+    filter_bp.filter_data=[document.getElementById("low").value,document.getElementById("high").value];
+    filter_bp.action_type=action_type.value;
+    filter_bp.action_data=action_data.value;
+   break;
+   case "Emotions filter":
+   filter_bp.filter_type=EMOTIONS_FILTER;
+    filter_bp.filter_data=filter_data.value;
+    filter_bp.action_type=action_type.value;
+    filter_bp.action_data=action_data.value;
+   break;
+   case "Behavior filter":
+   filter_bp.filter_type=BEHAVIORS_FILTER;
+    filter_bp.filter_data=filter_data.value;
+    filter_bp.action_type=action_type.value;
+    filter_bp.action_data=action_data.value;
+   break;
+   }
+   alert(JSON.stringify(filter_bp));
+  }
+  function pusher(idstr)
+  {
+  //  alert("sentiments: "+idstr.cust);
+  var filter_ctrl=document.getElementById("filter_ctrls");
+   switch(idstr.value)
+   {
+    case "sentiments filter":
+ //   alert("parsing sentimentts");
+    filter_ctrl.innerHTML="<input id='low' placeholder='low' style='width:20%;'/><input id='high' placeholder='high' style='width:20%;' onfocus='action(this)'/>";
+    break;
+    
+    case "Emotions filter":
+     var emotion_filter="<input id='filter_data' list='emotion_group' placeholder='Please choose filter' onclick='nuller(this)' onchange='action(this)' style='width:80%'><datalist id='emotion_group'><option value='Rage'/><option  value='Apprehension'/><option  value='Distress'/><option  value='Dejection'/><option  value='Surprise'/><option  value='Fondness'/><option  value='Resentment'/><option  value='Delight'/></datalist></input>";
+  
+     filter_ctrl.innerHTML=emotion_filter;
+    break;
+    
+    case "Behavior filter":
+    //   alert("parsing behavior");
+    var behavior_filter=  "<input id='filter_data' list='behavior_group' placeholder='Please choose filter' onclick='nuller(this)' onchange='action(this)' style='width:80%'><datalist id='behavior_group'><option value='Socially low'/><option value='Fairly Socialble'/><option value='Highly Socialble'/><option value='Low Activity'/><option value='Fairly Active'/><option value='Highly Active'/><option value='Low Openness'/><option value='Fairly Open'/><option value='Highly Open'/><option value='Low Conscious'/><option value='Highly Conscious'/><option value='Low Ethics'/><option value='High Ethics'/><option value='Low Capability'/><option value='Fair Capability'/><option value='High Capability'/><option value='Low Moderation'/><option value='Fair Moderation'/><option value='High Moderation'/></datalist></input>";
+    filter_ctrl.innerHTML=behavior_filter;
+    
+    break;
+    }
+  }
+  
+  function nuller(inobj)
+  {
+  //  inobj.value="";
+  }
+  //alert("yes");
+  
+  
+  function action(filter_obj)
+  {
+   var action_box=document.getElementById("action_div"); 
+   action_box.style.display="";
+    alert("action pending");
+  }
+  
+  function action_in(action_obj)
+  {
+   var action_holder=document.getElementById("action_holder"); 
+ //  action_box.style.display="";
+ //   alert("action pending");
+  switch(action_obj.value)
+  {
+   case "Reply":
+   action_holder.innerHTML="<textarea id='action_msg' placeholder='please_write_message' style='width:90%'></textarea>";
+   break;
+   case "React":
+   
+   break;
+   case "Private Message":
+   action_holder.innerHTML="<textarea id='action_msg' placeholder='please_write_message' style='width:90%'></textarea>";
+   break;
+  }
+  }
+  
+</script>
+  <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0"/>
+<div id="filter_div" style="background-color:#BFC2B8;width=60vw">
+    <b>FILTERS</b><br/>
+ 
+<!--div id="filter_div" style="width:95vw;height:5vh;display:inline;"-->
+ <table>
+   <tr>
+     <td>
+  <input id="data" list="data_group" placeholder="Please choose filter" onclick="nuller(this)" onchange="pusher(this)">
+  <datalist id="data_group">
+    <option value="sentiments filter"/>
+    <option  value="Emotions filter"/>
+    <option  value="Behavior filter"/>
+  </datalist>
+  
+  </input>
+    </td>
+    <td>
+  <div id="filter_ctrls">
+    
+  </div>
+  </td>
+  <td>
+   <button onclick="genfilter()">
+  FILTER
+</button>
+  </td>
+  </tr>
+  </table>
+<!--/div-->
+<div id="action_div" style="display:none;">
+  <table>
+    <tr>
+      <td>
+          <input id="action_type" list="action_group" placeholder="Please choose action" onclick="nuller(this)" onchange="action_in(this)">
+  <datalist id="action_group">
+    <option value="Reply"/>
+    <option  value="Reaction"/>
+    <option  value="Private Message"/>
+  </datalist>
+  
+  </input>
+      </td>
+      </tr>
+      </table>
+      <!--td>
+        <div id="action_holder">
+          
+        </div>
+      </td>
+    </tr>
+  </table-->
+       <div id="action_holder">
+          
+        </div>
+</div>
+</div>

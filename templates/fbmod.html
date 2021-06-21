@@ -1,0 +1,44 @@
+<html>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale:1.0"/>
+  <head>
+   <script src="https://connect.facebook.net/es_LA/sdk.js">
+  </script>
+  </head>
+  <body>
+    <script>
+    access_token=""
+  //  alert("genesis");
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '314957010159410',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v11.0'
+    });
+  };
+  
+  FB.getLoginStatus(function(response) {
+   // statusChangeCallback(response);
+   alert(response.status);
+   if(response.status=="unknown")
+   {
+   alert("not logged in");
+   auth_url="https://www.facebook.com/v11.0/dialog/oauth?client_id=314957010159410&redirect_uri=https://127.0.0.1:43720/fbmod.html&state=diamondsare4ever";
+   window.open(auth_url);
+   FB.login(function(response)
+   {
+    alert(response.accessToken);
+   },{scope:"public_profile,email"});
+   }
+   else
+   {
+   access_token=response.authResponse.accessToken
+   //alert(access_token);
+   document.getElementById("token").innerHTML=access_token;
+   }
+});
+</script>
+<b>WELCOME TO POSTEYE</b>
+<div id="token"></div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+#div-header-label
+{
+ 
+ color:white;
+ font-weight: bold;
+}
+
+#div-header
+{
+ background-color:#005CFF;
+ width:95vw;
+}
+
+#post-link-input
+{
+ margin-left:2%;
+ 
+}
+
+#div-input
+{
+ width:95vw;
+}
+
+#chart_div
+{
+ background-color: #454947;
+ width:95vw;
+ height:80vh;
+  margin-top:2%;
+}
+
+#chart_paper
+{
+ width:90vw;
+ height:90vh;
+}
+
+#filter_div
+{
+ display:none;
+}

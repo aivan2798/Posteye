@@ -1,0 +1,30 @@
+  "<input id='behavior_data' list='behavior_group' placeholder='Please choose filter' onclick='nuller(this)' onchange='action(this)'>
+  <datalist id='behavior_group'>
+    <option value='Socially low'/>
+    <option value='Fairly Socialble'/>
+    <option value='Highly Socialble'/>
+    <option value='Low Activity'/>
+    <option value='Fairly Active'/>
+    <option value='Highly Active'/>
+    <option value='Low Openness'/>
+    <option value='Fairly Open'/>
+    <option value='Highly Open'/>
+    <option value='Low Conscious'/>
+    <option value='Highly Conscious'/>
+    <option value='Low Ethics'/>
+    <option value='High Ethics'/>
+    <option value='Low Capability'/>
+    <option value='Fair Capability'/>
+    <option value='High Capability'/>
+    <option value='Low Moderation'/>
+    <option value='Fair Moderation'/>
+    <option value='High Moderation'/>
+  </datalist>
+  </input>"
+  
+" Socially low':0,'Fairly Socialble':0,'Highly Socialble':0,'Low Activity':0,'Fairly Active':0,'Highly Active':0,'Low Openess':0,'Fairly Open':0,'Highly Open':0,'Low Conscious':0,'Highly Conscious':0,'Low Ethics':0,'High Ethics':0,'Low Capability':0,'Fair Capability':0,'High Capability':0,'Low Moderation':0,'Fair Moderation':0,'High Moderation':0}"
+ 
+     "<input id='action_type' list='action_group' placeholder='choose action' onclick='nuller(this)' onchange='action_in(this)'><datalist id='action_group'>
+     <option value='Like'/>
+     <option  value='Care'/>
+     <option  value='Angry'/></datalist></input>"
