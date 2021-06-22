@@ -32,7 +32,7 @@ class Vessels:
        # overall_sentiment=
         self.comment_vein_emotions(comment,emotions_id_dic,emotions_count_dic)
         self.comment_vein_behaviors(comment,behaviors_id_dic,behaviors_count_dic)
-      indexer=indexer-2
+      indexer=indexer-10
     self.sentiments_full_data=self.pack_sentiments(sentiments_id_dic)
     self.emotions_full_data=self.pack_emotions(emotions_id_dic,emotions_count_dic)
     self.behaviors_full_data=self.pack_behaviors(behaviors_id_dic,behaviors_count_dic)
