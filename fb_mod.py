@@ -7,7 +7,7 @@ class fb_ctrl:
    self.fb_obj=facebook.GraphAPI(access_token=access_coin,version="3.1")
    
  def getCommentsCount(self,comment_id):
-   comments=self.fb_obj.get_connections(id=comment_id, connection_name="comments?summary=total_count&limit=2")
+   comments=self.fb_obj.get_connections(id=comment_id, connection_name="comments?summary=total_count&limit=10")
    return comments["summary"]["total_count"]
    
  def getComments(self,node_id,nxt_node):
@@ -22,10 +22,10 @@ class fb_ctrl:
  # comments_list["data"].append(comments["data"])
 #  comments=None
    if nxt_node!="":
-    comments=self.fb_obj.get_connections(id=node_id, connection_name="comments?limit=2&after="+str(nxt_node))
+    comments=self.fb_obj.get_connections(id=node_id, connection_name="comments?limit=10&after="+str(nxt_node))
  #   comments_list.append(comments)
    else:
-     comments=self.fb_obj.get_connections(id=node_id, connection_name="comments?limit=2")
+     comments=self.fb_obj.get_connections(id=node_id, connection_name="comments?limit=10")
   #  comments_list.append(comments)
     
   #print("number of comments"+str(comments_no))

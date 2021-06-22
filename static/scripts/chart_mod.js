@@ -15,7 +15,7 @@ function charts(chart_id,chart_label,data_labels,chart_data)
      data:chart_data,
      parsing:true,
      backgroundColor:"red",
-     borderColor:"grey",
+     borderColor:"black",
      fill: true
      }]
  },

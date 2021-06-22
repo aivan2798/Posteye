@@ -3,6 +3,7 @@ class Post_str
 cmd;
 name;
 token;
+type;
 }
 class Filter
 {
@@ -22,11 +23,10 @@ var BEHAVIORS=20170;
 var SENTIMENT_FILTER=199801;
 var EMOTIONS_FILTER=201401;
 var BEHAVIORS_FILTER=201701;
-//var redirector="https://127.0.0.1:5000/";
-var redirector="https://posteye.herokuapp.com";
+var redirector="https://127.0.0.1:5000/";
 var ANALYZE_POST=24645;
 var FILTER_COMMENTS=24646;
-
+var post_type;
 var CMD_REDIR=19000;
 var CMD_TICK=19010;
 var CMD_LOGOUT=19020;

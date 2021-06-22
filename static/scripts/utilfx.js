@@ -84,15 +84,6 @@ function marq()
 {
   
 }
-//from sitepoint
-function sleep(milliseconds)
-{
-  const date = Date.now();
-  let currentDate = null;
-  do {
-    currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
-}
 
 function logout(buttonobj)
 {
@@ -129,4 +120,9 @@ function logs(msg)
 {
   var prog_div=document.getElementById("div-progress");
   prog_div.innerHTML=msg;
+}
+
+function nuller(target)
+{
+ target.value="";
 }

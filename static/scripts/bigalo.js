@@ -8,6 +8,10 @@ function magi()
  var post_link=document.getElementById("post-link-input").value;
  poststr.cmd=ANALYZE_POST;
  poststr.name=post_link;
+ var ptype=document.getElementsByName("post_type");
+ var vtype=Array.from(ptype).find(radio=>radio.checked);
+ poststr.type=vtype.value;
+ post_type=vtype.value;
  //poststr.token=tok;
  //poststr.token=login();
  var post_json=JSON.stringify(poststr);

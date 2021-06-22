@@ -33,6 +33,4 @@
    <b>WELCOME TO POSTEYE</b>
   </div>
  
-https://m.facebook.com/story.php?story_fbid=2319430228126003&id=1028442447224794&fs=5&focus_composer=0&_rdc=1&_rdr
 
-https://www.facebook.com/connect/login_success.html

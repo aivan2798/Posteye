@@ -24,7 +24,7 @@
         <center>FB TRACK</center> 
       </div>
       <div id="div-input">
-        <input id="post-link-input" placeholder="please paste post link"/>
+        <input id="post-link-input" placeholder="please paste page post link"/>
         <button id="track-trigger" onClick="magi()">
           <!--button id="track-trigger" onClick="tcharts()"-->
           TRACK 🏇
@@ -34,6 +34,12 @@
           FILTER ⚙️
         </button>
       </div>
+    <u>  chose post type below</u><br/>
+    <form name="post_type_radio">
+      <b id="posttype">user post<input id="uid" type="radio" value="user_post" name="post_type"/>
+       page post<input id="pid" type="radio" value="page_post" name="post_type"/>
+      </b>
+    </form>
       <div id="div-progress">
       {{token}}</div>
       <button id="logout_button" onclick="logout(this)" style="float:right;margin-right:5%">LOGOUT</button>
@@ -48,7 +54,7 @@
  <table>
    <tr>
      <td>
-  <input id="data" list="data_group" placeholder="Choose filter" onclick="nuller(this)" onchange="pusher(this)">
+  <input id="data" list="data_group" placeholder="Choose filter" onfocus="nuller(this)" onchange="pusher(this)">
   <datalist id="data_group">
     <option value="sentiments filter"/>
     <option  value="Emotions filter"/>
@@ -65,7 +71,7 @@
   <td>
    <div>
    <button onclick="genfilter()">
-  FILTER
+  FILTER NOW
 </button>
 </div>
   </td>

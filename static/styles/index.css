@@ -44,6 +44,7 @@
 {
  font-weight:bold;
  color:white;
+ 
 }
 
 #sentiments_chart
@@ -63,4 +64,10 @@
  height:25%;
  width:100%;
  background-color:white;
+}
+
+#posttype
+{
+ color:black;
+ 
 }
