@@ -14,3 +14,7 @@ also replace "write expert.ai password" with your expert.ai password.
 in const_params.py and static/scripts/const_var.py replace "https://127.0.0.1:5000/ with your redirect url.
 
 then use the command python init.py to run the app.
+
+#tests
+The project has been tested to work on Mozila and Opera for
+windows, Opera and Google chrome for android without any issues.
