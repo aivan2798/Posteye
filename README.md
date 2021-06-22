@@ -9,3 +9,8 @@ sentiment's values, emotional traits or behavioral traits and
 apply actions such as liking or replying to the comment.
 
 # BUILDING
+clone the project, then in xpert_mod.py file, replace "write expert.ai username" with your expert.ai username,
+also replace "write expert.ai password" with your expert.ai password.
+in const_params.py and static/scripts/const_var.py replace "https://127.0.0.1:5000/ with your redirect url.
+
+then use the command python init.py to run the app.
